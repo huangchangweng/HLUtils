@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "HLUtils/HLUtils.h"
+#import "HLUtils.h"
 
 @interface ViewController ()
 

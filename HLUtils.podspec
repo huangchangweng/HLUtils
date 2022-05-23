@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
   spec.source_files  = "HLUtils/HLUtils/*.{h,m}"
 
   # 依赖系统库
-  spec.frameworks = "Foundation", "UIKit"
+  spec.frameworks = "UIKit"
 
 end
