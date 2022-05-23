@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   # git仓库，tag
-  spec.source       = { :git => "git@github.com:huangchangweng/HLUtils.git", :tag => "1.0.0" }
+  spec.source       = { :git => "git@github.com:huangchangweng/HLUtils.git", :tag => "1.0.1" }
 
   # 资源路径
   spec.source_files  = "HLUtils/HLUtils/*.{h,m}"
