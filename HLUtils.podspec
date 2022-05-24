@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
 
   # 描述
   spec.description  = <<-DESC
-      HLUtils是iOS工具类
+      HLUtils是iOS工具类，通过类方法使用非常方便。
   DESC
 
   # 项目主页
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   # git仓库，tag
-  spec.source       = { :git => "git@github.com:huangchangweng/HLUtils.git", :tag => "1.0.1" }
+  spec.source       = { :git => "https://github.com/huangchangweng/HLUtils.git", :tag => "1.0.0" }
 
   # 资源路径
   spec.source_files  = "HLUtils/HLUtils/*.{h,m}"
