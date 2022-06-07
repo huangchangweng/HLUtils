@@ -12,7 +12,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef NS_ENUM(NSInteger, HLDesensitizationType) {
+    HLDesensitizationTypePhone,    ///< 电话号码
+    HLDesensitizationTypeIDCard,   ///< 身份证
+};
 
 @interface HLUtils : NSObject
 
@@ -73,7 +76,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)phoneScarf:(NSString *)phone;
 
 // 根据颜色生成图片
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage *)imageWithColor:(UIColor *)color
+                       size:(CGSize)size;
 
 // 拨打电话
 + (void)callPhone:(NSString *)phone;
@@ -85,8 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)priceFormat:(CGFloat)price;
 
 // 电话、身份证格式化 (0.电话 1.身份证)
-+ (NSString *)numberFormat:(NSString *)number
-                      type:(NSInteger)type;
++ (NSString *)desensitization:(NSString *)number
+                         type:(HLDesensitizationType)type;
 
 // 64base字符串转图片
 + (UIImage *)stringToImage:(NSString *)str;
@@ -97,6 +101,21 @@ NS_ASSUME_NONNULL_BEGIN
 // 根据下标获取对应大写字母
 + (NSString *)letterWithIndex:(NSInteger)index;
 
-@end
+/**
+ *  图片压缩
+ *  @param  sourceImage 图片
+ *  @param  maxSize     最大尺寸（KB）
+ */
++ (NSData *)resetSizeOfImageData:(UIImage *)sourceImage
+                         maxSize:(NSInteger)maxSize;
 
-NS_ASSUME_NONNULL_END
+/**
+ *  剪裁图片
+ *  @param  sourceImage 图片
+ *  @param  size        剪裁后尺寸
+ *
+ */
++ (UIImage *)newSizeImage:(CGSize)size
+                    image:(UIImage *)sourceImage;
+
+@end

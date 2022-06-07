@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "HLUtils"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "HLUtils是iOS工具类"
 
   # 描述
