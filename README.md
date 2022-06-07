@@ -91,6 +91,23 @@ HLUtils中全是类方法，导入即用。
 
 // 根据下标获取对应大写字母
 + (NSString *)letterWithIndex:(NSInteger)index;
+
+/**
+ *  图片压缩
+ *  @param  sourceImage 图片
+ *  @param  maxSize     最大尺寸（KB）
+ */
++ (NSData *)resetSizeOfImageData:(UIImage *)sourceImage
+                         maxSize:(NSInteger)maxSize;
+
+/**
+ *  剪裁图片
+ *  @param  sourceImage 图片
+ *  @param  size        剪裁后尺寸
+ *
+ */
++ (UIImage *)newSizeImage:(CGSize)size
+                    image:(UIImage *)sourceImage;
 ```
 
 # Requirements
@@ -98,6 +115,10 @@ HLUtils中全是类方法，导入即用。
 iOS 9.0 +, Xcode 7.0 +
 
 # Version
+
+* 1.0.1 :
+
+  新增图片压缩和剪裁方法
 
 * 1.0.0 :
 
